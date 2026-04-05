@@ -19,6 +19,9 @@ body {
   color: var(--text);
   line-height: 1.5;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* === Layout === */
@@ -48,7 +51,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   letter-spacing: 0.01em;
 }
 
@@ -78,23 +81,10 @@ a:hover {
 
 /* === About / Profile Section === */
 .about {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
   margin-bottom: 2rem;
 }
 
-.about img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
-  flex-shrink: 0;
-  order: 1;
-}
-
 .about .blurb {
-  flex: 1;
   line-height: 1.3;
 }
 
@@ -106,15 +96,6 @@ a:hover {
 
 .about .links a {
   color: var(--dark-green);
-}
-
-@media (max-width: 500px) {
-  .about {
-    flex-direction: column;
-  }
-  .about img {
-    order: -1;
-  }
 }
 
 /* === Link lists (Research, Writings, Blog) === */
