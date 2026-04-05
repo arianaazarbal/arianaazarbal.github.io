@@ -1,0 +1,133 @@
+/* === Palette === */
+:root {
+  --cream: #f5f0e8;
+  --dark-green: #3a5a40;
+  --green: #588157;
+  --light-green: #a3b18a;
+  --brown: #6b4f3a;
+  --light-brown: #b08968;
+  --text: #2d2d2d;
+  --text-light: #5c5c5c;
+}
+
+/* === Reset & Base === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* === Layout === */
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* === Rules === */
+hr {
+  border: none;
+  border-top: 1px solid var(--light-green);
+  margin-bottom: 3rem;
+}
+
+hr.bottom {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+/* === Typography === */
+h1, h2 {
+  font-weight: 400;
+  color: var(--dark-green);
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-top: 2.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* === Links === */
+a {
+  color: var(--text);
+  text-decoration-color: var(--light-green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--brown);
+  text-decoration-color: var(--light-brown);
+  text-decoration-thickness: 2px;
+}
+
+/* === About / Profile Section === */
+.about {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  order: 1;
+}
+
+.about .blurb {
+  flex: 1;
+  line-height: 1.3;
+}
+
+.about .links {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.about .links a {
+  color: var(--dark-green);
+}
+
+@media (max-width: 500px) {
+  .about {
+    flex-direction: column;
+  }
+  .about img {
+    order: -1;
+  }
+}
+
+/* === Link lists (Research, Writings, Blog) === */
+.link-list, #posts {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.link-list li, #posts li {
+  padding: 0.3rem 0;
+}
+
+.link-list .detail, #posts .date {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
