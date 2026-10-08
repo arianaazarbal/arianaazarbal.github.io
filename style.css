@@ -4,8 +4,8 @@
   --dark-green: #3a5a40;
   --green: #588157;
   --light-green: #a3b18a;
-  --brown: #6b4f3a;
-  --light-brown: #b08968;
+  --plum: #7a4a6e;
+  --light-plum: #b892ad;
   --text: #2d2d2d;
   --text-light: #5c5c5c;
 }
@@ -51,12 +51,12 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 1.65rem;
+  font-size: 2rem;
   letter-spacing: 0.01em;
 }
 
 h2 {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   margin-top: 2.5rem;
 }
 
@@ -73,9 +73,11 @@ a {
   text-underline-offset: 3px;
 }
 
-a:hover {
-  color: var(--brown);
-  text-decoration-color: var(--light-brown);
+a:hover,
+.about .links a:hover,
+.link-list li.core > a:hover {
+  color: var(--plum);
+  text-decoration-color: var(--light-plum);
   text-decoration-thickness: 2px;
 }
 
@@ -111,4 +113,9 @@ a:hover {
 .link-list .detail, #posts .date {
   font-size: 0.85rem;
   color: var(--text-light);
+}
+
+.link-list li.core > a {
+  font-weight: bold;
+  color: var(--dark-green);
 }
